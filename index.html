@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body class="body__dark" data-theme="dark">
+    <div class="container">
+      <header class="header">
+        <div class="header__block1">
+          <h1
+            class="header__title header__title--highlight"
+            data-section="commands"
+            data-value="title"
+          >
+            12 MOST COMMON GIT COMMANDS
+          </h1>
+        </div>
+        <!-- /************************ CHANGE LANGUAGE ************************/ -->
+        <div class="header__block2">
+          <div class="header__language" id="header__flags">
+            <div class="flag__item" data-language="es">
+              <img
+                class="flag__img"
+                src="./icons/es.svg"
+                title="Español/Spanish"
+              />
+            </div>
+            <div class="flag__item" data-language="en">
+              <img
+                class="flag__img"
+                src="./icons/gb.svg"
+                title="Inglés/English"
+              />
+            </div>
+          </div>
+          <div class="header__toggle">
+            <input type="checkbox" id="toggle" />
+            <label for="toggle" class="toggle--dark"></label>
+          </div>
+        </div>
+      </header>
+
+      <section class="main">
+        <div class="main__commands">
+          <div class="main__commands--card">
+            <div class="card__title">
+              <p>git init</p>
+              <div class="card__title--border"></div>
+              <img src="./images/icon-start.png" alt="Facebook" />
+            </div>
+            <div class="card__paragraph">
+              <p data-section="commands" data-value="git-init">
+                Creates a new local repository in the current directory.
+              </p>
+            </div>
+          </div>
+
+          <div class="main__commands--card">
+            <div class="card__title">
+              <p>git clone</p>
+              <div class="card__title--border"></div>
+              <img src="./images/icon-clones.png" alt="Facebook" />
+            </div>
+            <div class="card__paragraph">
+              <p data-section="commands" data-value="git-clone">
+                Copies an existing remote repository to your local machine.
+              </p>
+            </div>
+          </div>
+
+          <div class="main__commands--card">
+            <div class="card__title">
+              <p>git status</p>
+              <div class="card__title--border"></div>
+              <img src="./images/icon-checklist.png" alt="Facebook" />
+            </div>
+            <div class="card__paragraph">
+              <p data-section="commands" data-value="git-status">
+                Shows the state of your working directory and staging area.
+              </p>
+            </div>
+          </div>
+
+          <div class="main__commands--card">
+            <div class="card__title">
+              <p>git add</p>
+              <div class="card__title--border"></div>
+              <img src="./images/icon-add.png" alt="Facebook" />
+            </div>
+            <div class="card__paragraph">
+              <p data-section="commands" data-value="git-add">
+                Adds changes in your working directory to the staging area,
+                which is a temporary area where you can prepare your next
+                commit.
+              </p>
+            </div>
+          </div>
+
+          <div class="main__commands--card">
+            <div class="card__title">
+              <p>git commit</p>
+              <div class="card__title--border"></div>
+              <img src="./images/icon-agreement.png" alt="Facebook" />
+            </div>
+            <div class="card__paragraph">
+              <p data-section="commands" data-value="git-commit">
+                Records the changes in the staging area as a new snapshot in the
+                local repository, along with a message describing the changes.
+              </p>
+            </div>
+          </div>
+
+          <div class="main__commands--card">
+            <div class="card__title">
+              <p>git push</p>
+              <div class="card__title--border"></div>
+              <img src="./images/icon-push.png" alt="Facebook" />
+            </div>
+            <div class="card__paragraph">
+              <p data-section="commands" data-value="git-push">
+                Uploads the local changes to the remote repository usually a on
+                a plataform like Github or Gitlab.
+              </p>
+            </div>
+          </div>
+
+          <div class="main__commands--card">
+            <div class="card__title">
+              <p>git pull</p>
+              <div class="card__title--border"></div>
+              <img src="./images/icon-pull.png" alt="Facebook" />
+            </div>
+            <div class="card__paragraph">
+              <p data-section="commands" data-value="git-pull">
+                Downloads the latest commits from a remote repository and merges
+                then with your local branch.
+              </p>
+            </div>
+          </div>
+
+          <div class="main__commands--card">
+            <div class="card__title">
+              <p>git branch</p>
+              <div class="card__title--border"></div>
+              <img src="./images/icon-branch.png" alt="Facebook" />
+            </div>
+            <div class="card__paragraph">
+              <p data-section="commands" data-value="git-branch">
+                Lists, creates, renames, or deletes branches in your local
+                repository. A branch is a pointer to a specific commit.
+              </p>
+            </div>
+          </div>
+
+          <div class="main__commands--card">
+            <div class="card__title">
+              <p>git checkout</p>
+              <div class="card__title--border"></div>
+              <img src="./images/icon-checkout.png" alt="Facebook" />
+            </div>
+            <div class="card__paragraph">
+              <p data-section="commands" data-value="git-checkout">
+                Switches your working directory to a different branch or commit,
+                discarding any uncommited changes.
+              </p>
+            </div>
+          </div>
+
+          <div class="main__commands--card">
+            <div class="card__title">
+              <p>git merge</p>
+              <div class="card__title--border"></div>
+              <img src="./images/icon-merge.png" alt="Facebook" />
+            </div>
+            <div class="card__paragraph">
+              <p data-section="commands" data-value="git-merge">
+                Combines the changes from one branch into another branch,
+                creating a new commit if there are no conflicts.
+              </p>
+            </div>
+          </div>
+
+          <div class="main__commands--card">
+            <div class="card__title">
+              <p>git diff</p>
+              <div class="card__title--border"></div>
+              <img src="./images/icon-facebook.svg" alt="Facebook" />
+            </div>
+            <div class="card__paragraph">
+              <p data-section="commands" data-value="git-diff">
+                Shows the differences between two commits, branches, files, or
+                the working directory and the staging area.
+              </p>
+            </div>
+          </div>
+
+          <div class="main__commands--card">
+            <div class="card__title">
+              <p>git log</p>
+              <div class="card__title--border"></div>
+              <img src="./images/icon-log.png" alt="Facebook" />
+            </div>
+            <div class="card__paragraph">
+              <p data-section="commands" data-value="git-log">
+                Shows the history of commits in the current branch, along with
+                their messages, authors, and dates.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__attribution">
+          Coded by
+          <a href="https://www.frontendmentor.io/profile/Bredis79"
+            >Edwin Amaranto</a
+          >.
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

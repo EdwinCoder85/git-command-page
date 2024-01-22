@@ -1,0 +1,262 @@
+/*** main scss ***/
+/*** RESET ***/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html {
+  color-scheme: dark light;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+.body__dark {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(230, 17%, 14%);
+}
+
+.body__light {
+  color: hsl(230, 17%, 14%);
+  background-color: hsl(0, 0%, 100%);
+}
+
+.container {
+  padding: 2.3em 1.5em;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1536px;
+  margin: 0 auto;
+  user-select: none;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+.header__block1 {
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid hsl(228, 34%, 66%);
+}
+.header__block1 .header__title {
+  font-size: 1.5rem;
+  margin-bottom: 0.15em;
+  font-weight: 900;
+}
+.header__block1 .header__title--highlight {
+  background: linear-gradient(to right, hsl(37, 100%, 55%), hsl(329, 70%, 58%));
+  color: transparent;
+  display: inline-block;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.header__block2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}
+.header__block2 .header__language {
+  width: 75px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+  margin-bottom: 2.5em;
+  gap: 0.5em;
+  cursor: pointer;
+}
+.header__block2 .header__language .flag__item {
+  display: block;
+  width: 30px;
+}
+.header__block2 .header__toggle {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+  margin-bottom: 2.5em;
+  align-items: center;
+}
+
+#toggle {
+  display: none;
+}
+#toggle:checked + label::before {
+  transform: translateX(26px);
+}
+
+.toggle--dark {
+  width: 50px;
+  height: 26px;
+  background: linear-gradient(to right, hsl(37, 100%, 55%), hsl(329, 70%, 58%));
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  margin-left: 32px;
+  display: flex;
+  align-items: center;
+}
+.toggle--dark::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  background-color: hsl(230, 17%, 14%);
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.toggle--light {
+  background: hsl(230, 22%, 74%);
+}
+.toggle--light:hover, .toggle--light:focus {
+  background: linear-gradient(to right, hsl(37, 100%, 55%), hsl(329, 70%, 58%));
+}
+.toggle--light::before {
+  background-color: hsl(227, 47%, 96%);
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 10;
+}
+.main__commands {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 0 auto;
+  justify-content: center;
+}
+.main__commands--card {
+  background-color: hsl(228, 28%, 20%);
+  border-radius: 10px;
+  display: flex;
+  gap: 17px;
+  flex-direction: column;
+  width: 300px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.main__commands--card .card__title {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.main__commands--card .card__title--border {
+  height: 5px;
+  width: 50%;
+  border-radius: 0 5px 5px 0;
+  background: linear-gradient(to right, hsl(37, 100%, 55%), hsl(329, 70%, 58%));
+  border: 0;
+  position: absolute;
+  bottom: 0;
+}
+.main__commands--card .card__title p {
+  padding-top: 1.5em;
+  padding-left: 1em;
+  padding-bottom: 0.7em;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.main__commands--card .card__title img {
+  padding-right: 1.85em;
+}
+.main__commands--card .card__paragraph p {
+  padding: 1.5em 1.85em 1.75em 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.main__commands--card:hover, .main__commands--card:focus {
+  background-color: hsl(228, 12%, 44%);
+  cursor: pointer;
+}
+.main__commands--card-L {
+  background-color: hsl(227, 47%, 96%);
+}
+.main__commands--card-L:hover, .main__commands--card-L:focus {
+  background-color: hsl(220, 32%, 90%);
+}
+
+.footer {
+  margin-top: 3rem;
+  text-align: center;
+  width: 100%;
+}
+.footer__attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.footer__attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 2.5em 7.1em;
+  }
+  .header {
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 3em;
+    margin: 0 auto;
+  }
+  .header__block1 {
+    padding-top: 0.8em;
+    border-bottom: 0;
+    width: 508px;
+  }
+  .header__block1 .header__title {
+    font-size: 1.7rem;
+    letter-spacing: 0.6px;
+  }
+  .header .header__language {
+    margin-bottom: 2.9em;
+  }
+  .header .header__toggle {
+    margin-top: 0.5em;
+    margin-bottom: 2.4em;
+  }
+  .header .header__toggle label {
+    margin-left: 14px;
+  }
+  .main {
+    margin-top: 1em;
+  }
+  .main__commands {
+    gap: 30px;
+    row-gap: 23px;
+    padding: 0 3em;
+  }
+  .main__commands--card {
+    max-width: 360px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

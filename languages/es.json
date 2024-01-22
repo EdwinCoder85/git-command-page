@@ -1,0 +1,17 @@
+{
+  "commands": {
+    "title": "12 COMANDOS GIT MÁS COMUNES",
+    "git-init": "Crea un nuevo repositorio local en el directorio actual.",
+    "git-clone": "Copia un repositorio remoto existente a su máquina local.",
+    "git-status": "Muestra el estado de su directorio de trabajo y área de preparación.",
+    "git-add": "Agrega cambios en su directorio de trabajo al área de preparación, que es un área temporal donde puede preparar su próxima confirmación.",
+    "git-commit": "Registra los cambios en el área de preparación como una nueva instantánea en el repositorio local, junto con un mensaje que describe los cambios.",
+    "git-push": "Carga los cambios locales al repositorio remoto, generalmente en una plataforma como Github o Gitlab.",
+    "git-pull": "Descarga las últimas confirmaciones de un repositorio remoto y luego las fusiona con su sucursal local.",
+    "git-branch": "Enumera, crea, renombra o elimina ramas en su repositorio local. Una rama es un puntero a una confirmación específica.",
+    "git-checkout": "Cambia su directorio de trabajo a una rama diferente o confirma, descartando cualquier cambio no confirmado.",
+    "git-merge": "Combina los cambios de una rama en otra rama, creando una nueva confirmación si no hay conflictos.",
+    "git-diff": "Muestra las diferencias entre dos confirmaciones, ramas, archivos o el directorio de trabajo y el área de preparación.",
+    "git-log": "Muestra el historial de confirmaciones en la rama actual, junto con sus mensajes, autores y fechas."
+  }
+}

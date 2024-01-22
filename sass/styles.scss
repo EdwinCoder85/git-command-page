@@ -1,0 +1,330 @@
+/*** main scss ***/
+$clr-Toggle-dark-theme: linear-gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+$clr-Toggle-light-theme: hsl(230, 22%, 74%);
+$clr-card-light-hover: hsl(220, 32%, 90%);
+$clrD-Very-Dark-Blue-BG: hsl(230, 17%, 14%);
+$clrD-Very-Dark-Blue-Top-BG-Pattern: hsl(232, 19%, 15%);
+$clrD-Dark-Desaturated-Blue-Card-BG: hsl(228, 28%, 20%);
+$clrD-Desaturated-Blue-Text: hsl(228, 34%, 66%);
+$clrD-White-Text: hsl(0, 0%, 100%);
+$clrL-White-BG: hsl(0, 0%, 100%);
+$clrL-Very-Pale-Blue-Top-BG-Pattern: hsl(225, 100%, 98%);
+$clrL-Light-Grayish-Blue-Card-BG: hsl(227, 47%, 96%);
+$clrL-Dark-Grayish-Blue-Text: hsl(228, 12%, 44%);
+$clrL-Very-Dark-Blue-Text: hsl(230, 17%, 14%);
+$ff-inter: "Inter", sans-serif;
+$fw-400: 400;
+$fw-700: 700;
+$fw-900: 900;
+
+/*** RESET ***/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html {
+  color-scheme: dark light;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+.body__dark {
+  font-family: $ff-inter;
+  font-weight: $fw-400;
+  color: $clrD-White-Text;
+  background-color: $clrD-Very-Dark-Blue-BG;
+}
+
+.body__light {
+  color: $clrL-Very-Dark-Blue-Text;
+  background-color: $clrL-White-BG;
+}
+
+.container {
+  padding: 2.3em 1.5em;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1536px;
+  margin: 0 auto;
+  user-select: none;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+
+  &__block1 {
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid $clrD-Desaturated-Blue-Text;
+
+    .header__title {
+      font-size: 1.5rem;
+      margin-bottom: 0.15em;
+      font-weight: $fw-900;
+
+      &--highlight {
+        background: linear-gradient(
+          to right,
+          hsl(37, 100%, 55%),
+          hsl(329, 70%, 58%)
+        );
+        color: transparent;
+        display: inline-block; // Asegura que el degradado se aplique solo al texto
+        background-clip: text; // Especifica que el degradado se aplica al texto
+        -webkit-background-clip: text;
+      }
+    }
+  }
+
+  &__block2{
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+
+    .header__language {
+      width: 75px;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1em;
+      margin-bottom: 2.5em;
+      gap: .5em;
+      cursor: pointer;
+  
+      .flag__item {
+        display: block;
+        width: 30px;
+      }
+    }
+  
+    .header__toggle {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1em;
+      margin-bottom: 2.5em;
+      align-items: center;
+    }
+  }
+
+}
+
+#toggle {
+  display: none;
+
+  &:checked + label {
+
+    &::before {
+      transform: translateX(26px);
+    }
+  }
+}
+
+.toggle--dark {
+  width: 50px;
+  height: 26px;
+  background: linear-gradient(to right, hsl(37, 100%, 55%), hsl(329, 70%, 58%));
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  margin-left: 32px;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    background-color: $clrD-Very-Dark-Blue-BG;
+    border-radius: 50%;
+    transition: transform 0.3s;
+  }
+}
+
+.toggle--light {
+  background: $clr-Toggle-light-theme;
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(
+      to right,
+      hsl(37, 100%, 55%),
+      hsl(329, 70%, 58%)
+    );
+  }
+
+  &::before {
+    background-color: $clrL-Light-Grayish-Blue-Card-BG;
+  }
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 10;
+
+  &__commands {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 0 auto;
+    justify-content: center;
+
+    &--card {
+      background-color: $clrD-Dark-Desaturated-Blue-Card-BG;
+      border-radius: 10px;
+      display: flex;
+      gap: 17px;
+      flex-direction: column;
+      width: 300px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+
+      .card__title {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        &--border {
+          height: 5px;
+          width: 50%;
+          border-radius: 0 5px 5px 0;
+          background: linear-gradient(
+            to right,
+            hsl(37, 100%, 55%),
+            hsl(329, 70%, 58%)
+          );
+          border: 0;
+          position: absolute;
+          bottom: 0;
+        }
+
+        p {
+          padding-top: 1.5em;
+          padding-left: 1em;
+          padding-bottom: 0.7em;
+          font-size: 1.5rem;
+          font-weight: $fw-900;
+        }
+
+        img {
+          padding-right: 1.85em;
+        }
+      }
+
+      .card__paragraph p {
+        padding: 1.5em 1.85em 1.75em 1.5em;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        font-size: 1rem;
+        font-weight: $fw-400;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: $clrL-Dark-Grayish-Blue-Text;
+        cursor: pointer;
+      }
+    }
+
+    &--card-L {
+      background-color: $clrL-Light-Grayish-Blue-Card-BG;
+
+      &:hover,
+      &:focus {
+        background-color: $clr-card-light-hover;
+      }
+    }
+  }
+}
+
+.footer {
+  margin-top: 3rem;
+  text-align: center;
+  width: 100%;
+
+  &__attribution {
+    font-size: 11px;
+    text-align: center;
+
+    a {
+      color: hsl(228, 45%, 44%);
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 2.5em 7.1em;
+  }
+
+  .header {
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 3em;
+    margin: 0 auto;
+
+    &__block1 {
+      padding-top: .8em;
+      border-bottom: 0;
+      width: 508px;
+
+      .header__title {
+        font-size: 1.7rem;
+        letter-spacing: 0.6px;
+      }
+    }
+
+    .header__language {
+      margin-bottom: 2.9em;
+    }
+
+    .header__toggle {
+      margin-top: .5em;
+      margin-bottom: 2.4em;
+
+      label {
+        margin-left: 14px;
+      }
+    }
+  }
+
+  .main {
+    margin-top: 1em;
+
+    &__commands {
+      gap: 30px;
+      row-gap: 23px;
+      padding: 0 3em;
+
+      &--card {
+        max-width: 360px;
+      }
+    }
+  }
+}
